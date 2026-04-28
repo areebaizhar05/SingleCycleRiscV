@@ -43,27 +43,15 @@ module riscv_fpga_top #(
         .clk_out (clk_slow)
     );
 
-    wire [15:0] cpu_led;
-    wire out_Jump, out_Branch, out_LUI;
-
     TopLevelProcessor #(
         .INIT_FILE(INIT_FILE)
     ) cpu (
         .clk (clk_slow),
         .rst (rst),
         .sw  (sw),
-        .led (cpu_led),
-        .seg_data (seg_data),
-        .out_Jump(out_Jump),
-        .out_Branch(out_Branch),
-        .out_LUI(out_LUI)
+        .led (led),
+        .seg_data (seg_data)
     );
-
-    // Visual Hardware Debug Logic
-    assign led[15]   = sw[15] ? out_LUI    : cpu_led[15];
-    assign led[14]   = sw[14] ? out_Branch : cpu_led[14];
-    assign led[13]   = sw[13] ? out_Jump   : cpu_led[13];
-    assign led[12:0] = cpu_led[12:0];
 
     seven_seg_controller seg_ctrl (
         .clk  (CLK100MHZ), // use fast clock for multiplexing
