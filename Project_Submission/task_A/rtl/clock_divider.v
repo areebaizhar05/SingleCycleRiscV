@@ -34,7 +34,7 @@ module clock_divider (
     
     // TEMPORARILY CHANGED FOR SIMULATION ONLY!
     // Change this back to 50_000_000 - 1 before programming the board!
-    localparam MAX_COUNT = 2;
+    localparam MAX_COUNT = 25000; // Changed to 25000 (2kHz) to match the 500 delay loop in assembly
     //localparam MAX_COUNT = 50_000_000 - 1;
 
     always @(posedge clk_in) begin

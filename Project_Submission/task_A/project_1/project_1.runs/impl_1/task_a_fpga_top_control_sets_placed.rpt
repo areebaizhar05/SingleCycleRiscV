@@ -1,0 +1,602 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Tue Apr 28 12:56:05 2026
+| Host         : DESKTOP-KNMORIL running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file task_a_fpga_top_control_sets_placed.rpt
+| Design       : task_a_fpga_top
+| Device       : xc7a35t
+--------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |   524 |
+|    Minimum number of control sets                        |   524 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |     1 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |   524 |
+| >= 0 to < 4        |     0 |
+| >= 4 to < 6        |     0 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |   524 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               0 |            0 |
+| No           | No                    | Yes                    |              52 |           17 |
+| No           | Yes                   | No                     |              27 |            5 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |             288 |           88 |
+| Yes          | Yes                   | No                     |           16416 |         6490 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------------+------------------------------------+------------------+------------------+----------------+--------------+
+|     Clock Signal     |            Enable Signal           | Set/Reset Signal | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------------+------------------------------------+------------------+------------------+----------------+--------------+
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_39[0] | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            |                                    | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_68[0] | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_75[0] | btnC_IBUF        |               15 |             32 |         2.13 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_70[0] | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_78[0] | btnC_IBUF        |               15 |             32 |         2.13 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_79[0] | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_4[0]  | btnC_IBUF        |               10 |             32 |         3.20 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_51[0] | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_49[0] | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_36[0] | btnC_IBUF        |               15 |             32 |         2.13 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_41[0] | btnC_IBUF        |               11 |             32 |         2.91 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_45[0] | btnC_IBUF        |               11 |             32 |         2.91 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_50[0] | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_60[0] | btnC_IBUF        |               17 |             32 |         1.88 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_8[0]  | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_83[0] | btnC_IBUF        |               11 |             32 |         2.91 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_84[0] | btnC_IBUF        |               10 |             32 |         3.20 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_43[0] | btnC_IBUF        |               10 |             32 |         3.20 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_64[0] | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_66[0] | btnC_IBUF        |                9 |             32 |         3.56 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_74[0] | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_77[0] | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_61[0] | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_35[0] | btnC_IBUF        |               14 |             32 |         2.29 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_86[0] | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_48[0] | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_37[0] | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_52[0] | btnC_IBUF        |               10 |             32 |         3.20 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_59[0] | btnC_IBUF        |               16 |             32 |         2.00 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_44[0] | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_54[0] | btnC_IBUF        |               11 |             32 |         2.91 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_55[0] | btnC_IBUF        |               19 |             32 |         1.68 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_58[0] | btnC_IBUF        |               14 |             32 |         2.29 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_6[0]  | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_62[0] | btnC_IBUF        |               10 |             32 |         3.20 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_63[0] | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_67[0] | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_72[0] | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_47[0] | btnC_IBUF        |               14 |             32 |         2.29 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_69[0] | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_65[0] | btnC_IBUF        |                8 |             32 |         4.00 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_71[0] | btnC_IBUF        |               10 |             32 |         3.20 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_40[0] | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_73[0] | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_76[0] | btnC_IBUF        |               15 |             32 |         2.13 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_46[0] | btnC_IBUF        |               11 |             32 |         2.91 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_42[0] | btnC_IBUF        |               10 |             32 |         3.20 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_80[0] | btnC_IBUF        |               16 |             32 |         2.00 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_87[0] | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_88[0] | btnC_IBUF        |               11 |             32 |         2.91 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_57[0] | btnC_IBUF        |               16 |             32 |         2.00 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_38[0] | btnC_IBUF        |               15 |             32 |         2.13 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_81[0] | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_56[0] | btnC_IBUF        |               10 |             32 |         3.20 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_89[0] | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_7[0]  | btnC_IBUF        |               11 |             32 |         2.91 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_53[0] | btnC_IBUF        |               10 |             32 |         3.20 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_82[0] | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_85[0] | btnC_IBUF        |               14 |             32 |         2.29 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_9[0]  | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_90[0] | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_91[0] | btnC_IBUF        |               17 |             32 |         1.88 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_92[0] | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_5[0]  | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/regs[22][3]_i_3_29[0] | btnC_IBUF        |               15 |             32 |         2.13 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_94[0] | btnC_IBUF        |               16 |             32 |         2.00 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_93[0] | btnC_IBUF        |               15 |             32 |         2.13 |
+|  clk_slow            | top/cpu/u_pc/mem[8][31]_i_3_13[0]  | btnC_IBUF        |               10 |             32 |         3.20 |
+|  clk_slow            | top/cpu/u_pc/mem[8][31]_i_3_6[0]   | btnC_IBUF        |                8 |             32 |         4.00 |
+|  clk_slow            | top/cpu/u_pc/mem[77][31]_i_2_9[0]  | btnC_IBUF        |               14 |             32 |         2.29 |
+|  clk_slow            | top/cpu/u_pc/mem[8][31]_i_3_10[0]  | btnC_IBUF        |               15 |             32 |         2.13 |
+|  clk_slow            | top/cpu/u_pc/mem[8][31]_i_3_12[0]  | btnC_IBUF        |                9 |             32 |         3.56 |
+|  clk_slow            | top/cpu/u_pc/mem[77][31]_i_2_7[0]  | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/mem[77][31]_i_2_29[0] | btnC_IBUF        |               14 |             32 |         2.29 |
+|  clk_slow            | top/cpu/u_pc/mem[77][31]_i_2_4[0]  | btnC_IBUF        |               11 |             32 |         2.91 |
+|  clk_slow            | top/cpu/u_pc/mem[8][31]_i_3_2[0]   | btnC_IBUF        |                9 |             32 |         3.56 |
+|  clk_slow            | top/cpu/u_pc/mem[8][31]_i_3_8[0]   | btnC_IBUF        |                8 |             32 |         4.00 |
+|  clk_slow            | top/cpu/u_pc/mem[77][31]_i_2_31[0] | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/mem[95][31]_i_2_0[0]  | btnC_IBUF        |               11 |             32 |         2.91 |
+|  clk_slow            | top/cpu/u_pc/mem[80][31]_i_3_1[0]  | btnC_IBUF        |               14 |             32 |         2.29 |
+|  clk_slow            | top/cpu/u_pc/mem[8][31]_i_3_1[0]   | btnC_IBUF        |               15 |             32 |         2.13 |
+|  clk_slow            | top/cpu/u_pc/mem[8][31]_i_3_14[0]  | btnC_IBUF        |               10 |             32 |         3.20 |
+|  clk_slow            | top/cpu/u_pc/mem[8][31]_i_3_5[0]   | btnC_IBUF        |               15 |             32 |         2.13 |
+|  clk_slow            | top/cpu/u_pc/mem[8][31]_i_3_3[0]   | btnC_IBUF        |                8 |             32 |         4.00 |
+|  clk_slow            | top/cpu/u_pc/mem[8][31]_i_3_7[0]   | btnC_IBUF        |               16 |             32 |         2.00 |
+|  clk_slow            | top/cpu/u_pc/mem[96][31]_i_3_1[0]  | btnC_IBUF        |               11 |             32 |         2.91 |
+|  clk_slow            | top/cpu/u_pc/mem[80][31]_i_3_2[0]  | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/mem[9][31]_i_2_0[0]   | btnC_IBUF        |               10 |             32 |         3.20 |
+|  clk_slow            | top/cpu/u_pc/mem[77][31]_i_2_3[0]  | btnC_IBUF        |               11 |             32 |         2.91 |
+|  clk_slow            | top/cpu/u_pc/mem[96][31]_i_3_0[0]  | btnC_IBUF        |                9 |             32 |         3.56 |
+|  clk_slow            | top/cpu/u_pc/mem[77][31]_i_2_30[0] | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/mem[8][31]_i_2_0[0]   | btnC_IBUF        |                9 |             32 |         3.56 |
+|  clk_slow            | top/cpu/u_pc/mem[77][31]_i_2_5[0]  | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/mem[8][31]_i_3_9[0]   | btnC_IBUF        |                8 |             32 |         4.00 |
+|  clk_slow            | top/cpu/u_pc/mem[80][31]_i_3_3[0]  | btnC_IBUF        |               14 |             32 |         2.29 |
+|  clk_slow            | top/cpu/u_pc/mem[80][31]_i_3_0[0]  | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/mem[77][31]_i_2_6[0]  | btnC_IBUF        |               14 |             32 |         2.29 |
+|  clk_slow            | top/cpu/u_pc/mem[77][31]_i_2_8[0]  | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/mem[96][31]_i_3_2[0]  | btnC_IBUF        |               10 |             32 |         3.20 |
+|  clk_slow            | top/cpu/u_pc/mem[8][31]_i_3_4[0]   | btnC_IBUF        |               10 |             32 |         3.20 |
+|  clk_slow            | top/cpu/u_pc/mem[8][31]_i_3_15[0]  | btnC_IBUF        |               10 |             32 |         3.20 |
+|  clk_slow            | top/cpu/u_pc/mem[8][31]_i_3_0[0]   | btnC_IBUF        |                9 |             32 |         3.56 |
+|  clk_slow            | top/cpu/u_pc/mem[96][31]_i_3_3[0]  | btnC_IBUF        |                9 |             32 |         3.56 |
+|  clk_slow            | top/cpu/u_pc/mem[8][31]_i_2_1[0]   | btnC_IBUF        |                9 |             32 |         3.56 |
+|  clk_slow            | top/cpu/u_pc/mem[8][31]_i_3_11[0]  | btnC_IBUF        |                9 |             32 |         3.56 |
+|  clk_slow            | top/cpu/u_pc/regs[22][3]_i_3_3[0]  | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/regs[22][3]_i_3_20[0] | btnC_IBUF        |               14 |             32 |         2.29 |
+|  clk_slow            | top/cpu/u_pc/regs[22][3]_i_3_16[0] | btnC_IBUF        |               16 |             32 |         2.00 |
+|  clk_slow            | top/cpu/u_pc/regs[22][3]_i_3_25[0] | btnC_IBUF        |               17 |             32 |         1.88 |
+|  clk_slow            | top/cpu/u_pc/regs[22][3]_i_3_1[0]  | btnC_IBUF        |               19 |             32 |         1.68 |
+|  clk_slow            | top/cpu/u_pc/regs[22][3]_i_3_30[0] | btnC_IBUF        |               18 |             32 |         1.78 |
+|  clk_slow            | top/cpu/u_pc/regs[22][3]_i_3_31[0] | btnC_IBUF        |               18 |             32 |         1.78 |
+|  clk_slow            | top/cpu/u_pc/regs[22][3]_i_3_21[0] | btnC_IBUF        |               14 |             32 |         2.29 |
+|  clk_slow            | top/cpu/u_pc/regs[22][3]_i_3_11[0] | btnC_IBUF        |               14 |             32 |         2.29 |
+|  clk_slow            | top/cpu/u_pc/regs[22][3]_i_3_18[0] | btnC_IBUF        |               20 |             32 |         1.60 |
+|  clk_slow            | top/cpu/u_pc/regs[22][3]_i_3_12[0] | btnC_IBUF        |               11 |             32 |         2.91 |
+|  clk_slow            | top/cpu/u_pc/regs[22][3]_i_3_19[0] | btnC_IBUF        |               16 |             32 |         2.00 |
+|  clk_slow            | top/cpu/u_pc/regs[22][3]_i_3_2[0]  | btnC_IBUF        |               15 |             32 |         2.13 |
+|  clk_slow            | top/cpu/u_pc/regs[22][3]_i_3_10[0] | btnC_IBUF        |               14 |             32 |         2.29 |
+|  clk_slow            | top/cpu/u_pc/regs[22][3]_i_3_14[0] | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/regs[22][3]_i_3_0[0]  | btnC_IBUF        |               16 |             32 |         2.00 |
+|  clk_slow            | top/cpu/u_pc/regs[22][3]_i_3_17[0] | btnC_IBUF        |               10 |             32 |         3.20 |
+|  clk_slow            | top/cpu/u_pc/regs[22][3]_i_3_22[0] | btnC_IBUF        |               14 |             32 |         2.29 |
+|  clk_slow            | top/cpu/u_pc/regs[22][3]_i_3_15[0] | btnC_IBUF        |                9 |             32 |         3.56 |
+|  clk_slow            | top/cpu/u_pc/regs[22][3]_i_3_23[0] | btnC_IBUF        |               10 |             32 |         3.20 |
+|  clk_slow            | top/cpu/u_pc/regs[22][3]_i_3_24[0] | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/regs[22][3]_i_3_26[0] | btnC_IBUF        |               18 |             32 |         1.78 |
+|  clk_slow            | top/cpu/u_pc/regs[22][3]_i_3_27[0] | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/regs[22][3]_i_3_28[0] | btnC_IBUF        |               15 |             32 |         2.13 |
+|  clk_slow            | top/cpu/u_pc/mem[77][31]_i_2_12[0] | btnC_IBUF        |               11 |             32 |         2.91 |
+|  clk_slow            | top/cpu/u_pc/regs[22][3]_i_3_13[0] | btnC_IBUF        |               11 |             32 |         2.91 |
+|  clk_slow            | top/cpu/u_pc/regs[22][3]_i_3_35[0] | btnC_IBUF        |               10 |             32 |         3.20 |
+|  clk_slow            | top/cpu/u_pc/regs[22][4]_i_3_26[0] | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/regs[22][4]_i_3_17[0] | btnC_IBUF        |               18 |             32 |         1.78 |
+|  clk_slow            | top/cpu/u_pc/regs[22][4]_i_3_29[0] | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/regs[22][4]_i_3_33[0] | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/regs[22][4]_i_3_0[0]  | btnC_IBUF        |               11 |             32 |         2.91 |
+|  clk_slow            | top/cpu/u_pc/regs[22][3]_i_3_37[0] | btnC_IBUF        |               11 |             32 |         2.91 |
+|  clk_slow            | top/cpu/u_pc/regs[22][4]_i_3_9[0]  | btnC_IBUF        |               14 |             32 |         2.29 |
+|  clk_slow            | top/cpu/u_pc/regs[22][4]_i_3_10[0] | btnC_IBUF        |               14 |             32 |         2.29 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_0[0]  | btnC_IBUF        |               11 |             32 |         2.91 |
+|  clk_slow            | top/cpu/u_pc/regs[22][4]_i_3_34[0] | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/regs[22][3]_i_3_9[0]  | btnC_IBUF        |               17 |             32 |         1.88 |
+|  clk_slow            | top/cpu/u_pc/regs[22][3]_i_3_6[0]  | btnC_IBUF        |                8 |             32 |         4.00 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_1[0]  | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/regs[22][4]_i_3_32[0] | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/regs[22][4]_i_3_19[0] | btnC_IBUF        |               18 |             32 |         1.78 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_10[0] | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/regs[22][4]_i_3_20[0] | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_11[0] | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_12[0] | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/regs[22][4]_i_3_16[0] | btnC_IBUF        |               15 |             32 |         2.13 |
+|  clk_slow            | top/cpu/u_pc/regs[22][3]_i_3_33[0] | btnC_IBUF        |               18 |             32 |         1.78 |
+|  clk_slow            | top/cpu/u_pc/regs[22][4]_i_3_18[0] | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/regs[22][4]_i_3_25[0] | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/regs[22][4]_i_3_30[0] | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/regs[22][4]_i_3_22[0] | btnC_IBUF        |               14 |             32 |         2.29 |
+|  clk_slow            | top/cpu/u_pc/regs[22][4]_i_3_6[0]  | btnC_IBUF        |               11 |             32 |         2.91 |
+|  clk_slow            | top/cpu/u_pc/regs[22][4]_i_3_14[0] | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/regs[22][4]_i_3_4[0]  | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/regs[22][4]_i_3_31[0] | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/regs[22][3]_i_3_36[0] | btnC_IBUF        |               11 |             32 |         2.91 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_13[0] | btnC_IBUF        |               14 |             32 |         2.29 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_14[0] | btnC_IBUF        |               11 |             32 |         2.91 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_15[0] | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/regs[22][4]_i_3_27[0] | btnC_IBUF        |               15 |             32 |         2.13 |
+|  clk_slow            | top/cpu/u_pc/regs[22][4]_i_3_12[0] | btnC_IBUF        |               14 |             32 |         2.29 |
+|  clk_slow            | top/cpu/u_pc/regs[22][4]_i_3_13[0] | btnC_IBUF        |               15 |             32 |         2.13 |
+|  clk_slow            | top/cpu/u_pc/regs[22][3]_i_3_38[0] | btnC_IBUF        |               11 |             32 |         2.91 |
+|  clk_slow            | top/cpu/u_pc/regs[22][3]_i_3_8[0]  | btnC_IBUF        |                9 |             32 |         3.56 |
+|  clk_slow            | top/cpu/u_pc/regs[22][4]_i_3_1[0]  | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/regs[22][3]_i_3_7[0]  | btnC_IBUF        |               19 |             32 |         1.68 |
+|  clk_slow            | top/cpu/u_pc/regs[22][4]_i_3_11[0] | btnC_IBUF        |               14 |             32 |         2.29 |
+|  clk_slow            | top/cpu/u_pc/regs[22][4]_i_3_2[0]  | btnC_IBUF        |               15 |             32 |         2.13 |
+|  clk_slow            | top/cpu/u_pc/regs[22][4]_i_3_21[0] | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/regs[22][4]_i_3_3[0]  | btnC_IBUF        |               14 |             32 |         2.29 |
+|  clk_slow            | top/cpu/u_pc/regs[22][4]_i_3_35[0] | btnC_IBUF        |               16 |             32 |         2.00 |
+|  clk_slow            | top/cpu/u_pc/regs[22][4]_i_3_23[0] | btnC_IBUF        |               14 |             32 |         2.29 |
+|  clk_slow            | top/cpu/u_pc/regs[22][4]_i_3_36[0] | btnC_IBUF        |               10 |             32 |         3.20 |
+|  clk_slow            | top/cpu/u_pc/regs[22][4]_i_3_37[0] | btnC_IBUF        |               14 |             32 |         2.29 |
+|  clk_slow            | top/cpu/u_pc/regs[22][4]_i_3_38[0] | btnC_IBUF        |               14 |             32 |         2.29 |
+|  clk_slow            | top/cpu/u_pc/regs[22][4]_i_3_15[0] | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/regs[22][4]_i_3_28[0] | btnC_IBUF        |               16 |             32 |         2.00 |
+|  clk_slow            | top/cpu/u_pc/regs[22][4]_i_3_5[0]  | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/regs[22][3]_i_3_4[0]  | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/regs[22][3]_i_3_34[0] | btnC_IBUF        |               11 |             32 |         2.91 |
+|  clk_slow            | top/cpu/u_pc/regs[22][4]_i_3_24[0] | btnC_IBUF        |               16 |             32 |         2.00 |
+|  clk_slow            | top/cpu/u_pc/regs[22][4]_i_3_7[0]  | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/regs[22][4]_i_3_8[0]  | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/regs[22][3]_i_3_32[0] | btnC_IBUF        |               14 |             32 |         2.29 |
+|  clk_slow            | top/cpu/u_pc/regs[22][3]_i_3_5[0]  | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_29[0] | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_27[0] | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_26[0] | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_28[0] | btnC_IBUF        |               11 |             32 |         2.91 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_31[0] | btnC_IBUF        |                9 |             32 |         3.56 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_32[0] | btnC_IBUF        |               10 |             32 |         3.20 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_33[0] | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_34[0] | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_19[0] | btnC_IBUF        |               11 |             32 |         2.91 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_20[0] | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_22[0] | btnC_IBUF        |               11 |             32 |         2.91 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_25[0] | btnC_IBUF        |               17 |             32 |         1.88 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_23[0] | btnC_IBUF        |               10 |             32 |         3.20 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_30[0] | btnC_IBUF        |               16 |             32 |         2.00 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_16[0] | btnC_IBUF        |               15 |             32 |         2.13 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_18[0] | btnC_IBUF        |               10 |             32 |         3.20 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_17[0] | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_2[0]  | btnC_IBUF        |               14 |             32 |         2.29 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_24[0] | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_3[0]  | btnC_IBUF        |               11 |             32 |         2.91 |
+|  clk_slow            | top/cpu/u_pc/regs[22][7]_i_3_21[0] | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/E[0]                  | btnC_IBUF        |               10 |             32 |         3.20 |
+|  clk_slow            | top/cpu/u_pc/PC_reg[7]_1[0]        | btnC_IBUF        |               14 |             32 |         2.29 |
+|  clk_slow            | top/cpu/u_pc/PC_reg[2]_8[0]        | btnC_IBUF        |               10 |             32 |         3.20 |
+|  clk_slow            | top/cpu/u_pc/PC_reg[7]_2[0]        | btnC_IBUF        |                9 |             32 |         3.56 |
+|  clk_slow            | top/cpu/u_pc/PC_reg[4]_53[0]       | btnC_IBUF        |               10 |             32 |         3.20 |
+|  clk_slow            | top/cpu/u_pc/PC_reg[7]_3[0]        | btnC_IBUF        |                8 |             32 |         4.00 |
+|  clk_slow            | top/cpu/u_pc/PC_reg[3]_0[0]        | btnC_IBUF        |                8 |             32 |         4.00 |
+|  clk_slow            | top/cpu/u_pc/PC_reg[7]_4[0]        | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/PC_reg[7]_5[0]        | btnC_IBUF        |                9 |             32 |         3.56 |
+|  clk_slow            | top/cpu/u_pc/PC_reg[7]_7[0]        | btnC_IBUF        |               10 |             32 |         3.20 |
+|  clk_slow            | top/cpu/u_pc/PC_reg[7]_6[0]        | btnC_IBUF        |               11 |             32 |         2.91 |
+|  clk_slow            | top/cpu/u_pc/mem[0][31]_i_4_8[0]   | btnC_IBUF        |               15 |             32 |         2.13 |
+|  clk_slow            | top/cpu/u_pc/mem[129][31]_i_4_1[0] | btnC_IBUF        |               15 |             32 |         2.13 |
+|  clk_slow            | top/cpu/u_pc/mem[0][31]_i_4_0[0]   | btnC_IBUF        |               14 |             32 |         2.29 |
+|  clk_slow            | top/cpu/u_pc/mem[0][31]_i_4_20[0]  | btnC_IBUF        |               11 |             32 |         2.91 |
+|  clk_slow            | top/cpu/u_pc/mem[129][31]_i_4_2[0] | btnC_IBUF        |               11 |             32 |         2.91 |
+|  clk_slow            | top/cpu/u_pc/mem[0][31]_i_4_6[0]   | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/mem[0][31]_i_4_2[0]   | btnC_IBUF        |               10 |             32 |         3.20 |
+|  clk_slow            | top/cpu/u_pc/mem[0][31]_i_4_22[0]  | btnC_IBUF        |               11 |             32 |         2.91 |
+|  clk_slow            | top/cpu/u_pc/mem[0][31]_i_5_11[0]  | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/mem[129][31]_i_4_3[0] | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/mem[0][31]_i_4_24[0]  | btnC_IBUF        |               14 |             32 |         2.29 |
+|  clk_slow            | top/cpu/u_pc/mem[0][31]_i_4_18[0]  | btnC_IBUF        |               14 |             32 |         2.29 |
+|  clk_slow            | top/cpu/u_pc/mem[0][31]_i_4_9[0]   | btnC_IBUF        |                9 |             32 |         3.56 |
+|  clk_slow            | top/cpu/u_pc/mem[0][31]_i_5_3[0]   | btnC_IBUF        |               11 |             32 |         2.91 |
+|  clk_slow            | top/cpu/u_pc/mem[0][31]_i_4_10[0]  | btnC_IBUF        |               17 |             32 |         1.88 |
+|  clk_slow            | top/cpu/u_pc/mem[0][31]_i_5_5[0]   | btnC_IBUF        |               14 |             32 |         2.29 |
+|  clk_slow            | top/cpu/u_pc/mem[0][31]_i_4_1[0]   | btnC_IBUF        |               14 |             32 |         2.29 |
+|  clk_slow            | top/cpu/u_pc/mem[0][31]_i_4_13[0]  | btnC_IBUF        |               11 |             32 |         2.91 |
+|  clk_slow            | top/cpu/u_pc/mem[0][31]_i_4_17[0]  | btnC_IBUF        |               15 |             32 |         2.13 |
+|  clk_slow            | top/cpu/u_pc/mem[0][31]_i_4_21[0]  | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/mem[0][31]_i_4_3[0]   | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/mem[0][31]_i_4_5[0]   | btnC_IBUF        |               11 |             32 |         2.91 |
+|  clk_slow            | top/cpu/u_pc/mem[0][31]_i_5_0[0]   | btnC_IBUF        |               18 |             32 |         1.78 |
+|  clk_slow            | top/cpu/u_pc/mem[0][31]_i_5_12[0]  | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/mem[0][31]_i_5_13[0]  | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/mem[0][31]_i_5_2[0]   | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/mem[0][31]_i_5_6[0]   | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/mem[0][31]_i_4_12[0]  | btnC_IBUF        |               10 |             32 |         3.20 |
+|  clk_slow            | top/cpu/u_pc/mem[0][31]_i_5_4[0]   | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/mem[0][31]_i_4_16[0]  | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/mem[0][31]_i_4_11[0]  | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/mem[0][31]_i_4_19[0]  | btnC_IBUF        |               11 |             32 |         2.91 |
+|  clk_slow            | top/cpu/u_pc/mem[0][31]_i_5_7[0]   | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/mem[0][31]_i_5_10[0]  | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/mem[0][31]_i_4_14[0]  | btnC_IBUF        |               16 |             32 |         2.00 |
+|  clk_slow            | top/cpu/u_pc/mem[0][31]_i_4_15[0]  | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/mem[0][31]_i_5_8[0]   | btnC_IBUF        |               18 |             32 |         1.78 |
+|  clk_slow            | top/cpu/u_pc/mem[0][31]_i_4_4[0]   | btnC_IBUF        |               10 |             32 |         3.20 |
+|  clk_slow            | top/cpu/u_pc/mem[0][31]_i_4_7[0]   | btnC_IBUF        |               14 |             32 |         2.29 |
+|  clk_slow            | top/cpu/u_pc/mem[0][31]_i_5_1[0]   | btnC_IBUF        |               10 |             32 |         3.20 |
+|  clk_slow            | top/cpu/u_pc/mem[0][31]_i_5_9[0]   | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/mem[112][31]_i_2_0[0] | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/mem[129][31]_i_4_0[0] | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/mem[0][31]_i_4_23[0]  | btnC_IBUF        |               14 |             32 |         2.29 |
+|  clk_slow            | top/cpu/u_pc/mem[161][31]_i_4_1[0] | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/mem[16][31]_i_3_12[0] | btnC_IBUF        |               15 |             32 |         2.13 |
+|  clk_slow            | top/cpu/u_pc/mem[129][31]_i_4_5[0] | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/mem[163][31]_i_2_6[0] | btnC_IBUF        |               15 |             32 |         2.13 |
+|  clk_slow            | top/cpu/u_pc/mem[16][31]_i_3_23[0] | btnC_IBUF        |               16 |             32 |         2.00 |
+|  clk_slow            | top/cpu/u_pc/mem[16][31]_i_3_25[0] | btnC_IBUF        |               10 |             32 |         3.20 |
+|  clk_slow            | top/cpu/u_pc/mem[169][31]_i_2_3[0] | btnC_IBUF        |               16 |             32 |         2.00 |
+|  clk_slow            | top/cpu/u_pc/mem[163][31]_i_2_5[0] | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/mem[164][31]_i_2_0[0] | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/mem[16][31]_i_3_14[0] | btnC_IBUF        |               11 |             32 |         2.91 |
+|  clk_slow            | top/cpu/u_pc/mem[16][31]_i_3_26[0] | btnC_IBUF        |                9 |             32 |         3.56 |
+|  clk_slow            | top/cpu/u_pc/mem[161][31]_i_4_3[0] | btnC_IBUF        |               11 |             32 |         2.91 |
+|  clk_slow            | top/cpu/u_pc/mem[129][31]_i_4_4[0] | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/mem[16][31]_i_3_28[0] | btnC_IBUF        |                8 |             32 |         4.00 |
+|  clk_slow            | top/cpu/u_pc/mem[166][31]_i_2_0[0] | btnC_IBUF        |               14 |             32 |         2.29 |
+|  clk_slow            | top/cpu/u_pc/mem[163][31]_i_2_2[0] | btnC_IBUF        |               17 |             32 |         1.88 |
+|  clk_slow            | top/cpu/u_pc/mem[16][31]_i_3_5[0]  | btnC_IBUF        |               15 |             32 |         2.13 |
+|  clk_slow            | top/cpu/u_pc/mem[16][31]_i_3_6[0]  | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/mem[16][31]_i_3_9[0]  | btnC_IBUF        |               15 |             32 |         2.13 |
+|  clk_slow            | top/cpu/u_pc/mem[177][31]_i_3_0[0] | btnC_IBUF        |               11 |             32 |         2.91 |
+|  clk_slow            | top/cpu/u_pc/mem[16][31]_i_3_20[0] | btnC_IBUF        |               16 |             32 |         2.00 |
+|  clk_slow            | top/cpu/u_pc/mem[177][31]_i_3_1[0] | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/mem[144][31]_i_2_1[0] | btnC_IBUF        |               15 |             32 |         2.13 |
+|  clk_slow            | top/cpu/u_pc/mem[163][31]_i_3_0[0] | btnC_IBUF        |               15 |             32 |         2.13 |
+|  clk_slow            | top/cpu/u_pc/mem[144][31]_i_2_0[0] | btnC_IBUF        |               15 |             32 |         2.13 |
+|  clk_slow            | top/cpu/u_pc/mem[149][31]_i_2_0[0] | btnC_IBUF        |               14 |             32 |         2.29 |
+|  clk_slow            | top/cpu/u_pc/mem[169][31]_i_2_0[0] | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/mem[169][31]_i_2_5[0] | btnC_IBUF        |               16 |             32 |         2.00 |
+|  clk_slow            | top/cpu/u_pc/mem[16][31]_i_3_10[0] | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/mem[144][31]_i_2_3[0] | btnC_IBUF        |               17 |             32 |         1.88 |
+|  clk_slow            | top/cpu/u_pc/mem[16][31]_i_3_0[0]  | btnC_IBUF        |                8 |             32 |         4.00 |
+|  clk_slow            | top/cpu/u_pc/mem[16][31]_i_3_16[0] | btnC_IBUF        |               11 |             32 |         2.91 |
+|  clk_slow            | top/cpu/u_pc/mem[16][31]_i_3_19[0] | btnC_IBUF        |               16 |             32 |         2.00 |
+|  clk_slow            | top/cpu/u_pc/mem[16][31]_i_3_2[0]  | btnC_IBUF        |               15 |             32 |         2.13 |
+|  clk_slow            | top/cpu/u_pc/mem[161][31]_i_4_2[0] | btnC_IBUF        |                9 |             32 |         3.56 |
+|  clk_slow            | top/cpu/u_pc/mem[163][31]_i_2_1[0] | btnC_IBUF        |               16 |             32 |         2.00 |
+|  clk_slow            | top/cpu/u_pc/mem[163][31]_i_2_0[0] | btnC_IBUF        |               16 |             32 |         2.00 |
+|  clk_slow            | top/cpu/u_pc/mem[16][31]_i_3_13[0] | btnC_IBUF        |                8 |             32 |         4.00 |
+|  clk_slow            | top/cpu/u_pc/mem[16][31]_i_3_21[0] | btnC_IBUF        |               16 |             32 |         2.00 |
+|  clk_slow            | top/cpu/u_pc/mem[134][31]_i_2_1[0] | btnC_IBUF        |               15 |             32 |         2.13 |
+|  clk_slow            | top/cpu/u_pc/mem[169][31]_i_2_4[0] | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/mem[129][31]_i_4_6[0] | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/mem[16][31]_i_3_15[0] | btnC_IBUF        |                9 |             32 |         3.56 |
+|  clk_slow            | top/cpu/u_pc/mem[16][31]_i_3_27[0] | btnC_IBUF        |                8 |             32 |         4.00 |
+|  clk_slow            | top/cpu/u_pc/mem[16][31]_i_3_3[0]  | btnC_IBUF        |               15 |             32 |         2.13 |
+|  clk_slow            | top/cpu/u_pc/mem[16][31]_i_3_7[0]  | btnC_IBUF        |               14 |             32 |         2.29 |
+|  clk_slow            | top/cpu/u_pc/mem[16][31]_i_3_22[0] | btnC_IBUF        |               17 |             32 |         1.88 |
+|  clk_slow            | top/cpu/u_pc/mem[144][31]_i_2_2[0] | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/mem[169][31]_i_2_2[0] | btnC_IBUF        |               22 |             32 |         1.45 |
+|  clk_slow            | top/cpu/u_pc/mem[16][31]_i_3_18[0] | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/mem[16][31]_i_3_8[0]  | btnC_IBUF        |               15 |             32 |         2.13 |
+|  clk_slow            | top/cpu/u_pc/mem[134][31]_i_2_0[0] | btnC_IBUF        |               15 |             32 |         2.13 |
+|  clk_slow            | top/cpu/u_pc/mem[163][31]_i_2_4[0] | btnC_IBUF        |               14 |             32 |         2.29 |
+|  clk_slow            | top/cpu/u_pc/mem[169][31]_i_2_1[0] | btnC_IBUF        |               10 |             32 |         3.20 |
+|  clk_slow            | top/cpu/u_pc/mem[16][31]_i_3_17[0] | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/mem[16][31]_i_3_24[0] | btnC_IBUF        |               16 |             32 |         2.00 |
+|  clk_slow            | top/cpu/u_pc/mem[172][31]_i_2_0[0] | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/mem[16][31]_i_3_4[0]  | btnC_IBUF        |               15 |             32 |         2.13 |
+|  clk_slow            | top/cpu/u_pc/mem[161][31]_i_4_0[0] | btnC_IBUF        |               10 |             32 |         3.20 |
+|  clk_slow            | top/cpu/u_pc/mem[16][31]_i_3_11[0] | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/mem[163][31]_i_2_3[0] | btnC_IBUF        |               14 |             32 |         2.29 |
+|  clk_slow            | top/cpu/u_pc/mem[165][31]_i_2_0[0] | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/mem[144][31]_i_2_4[0] | btnC_IBUF        |               16 |             32 |         2.00 |
+|  clk_slow            | top/cpu/u_pc/mem[16][31]_i_3_1[0]  | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/mem[257][31]_i_4_3[0] | btnC_IBUF        |               11 |             32 |         2.91 |
+|  clk_slow            | top/cpu/u_pc/mem[258][31]_i_2_0[0] | btnC_IBUF        |               11 |             32 |         2.91 |
+|  clk_slow            | top/cpu/u_pc/mem[265][31]_i_2_0[0] | btnC_IBUF        |               23 |             32 |         1.39 |
+|  clk_slow            | top/cpu/u_pc/mem[272][31]_i_2_0[0] | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/mem[272][31]_i_2_1[0] | btnC_IBUF        |               18 |             32 |         1.78 |
+|  clk_slow            | top/cpu/u_pc/mem[289][31]_i_4_2[0] | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/mem[1][31]_i_5_6[0]   | btnC_IBUF        |               10 |             32 |         3.20 |
+|  clk_slow            | top/cpu/u_pc/mem[257][31]_i_4_6[0] | btnC_IBUF        |               10 |             32 |         3.20 |
+|  clk_slow            | top/cpu/u_pc/mem[17][31]_i_4_4[0]  | btnC_IBUF        |                8 |             32 |         4.00 |
+|  clk_slow            | top/cpu/u_pc/mem[196][31]_i_2_0[0] | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/mem[196][31]_i_2_2[0] | btnC_IBUF        |               10 |             32 |         3.20 |
+|  clk_slow            | top/cpu/u_pc/mem[1][31]_i_4_0[0]   | btnC_IBUF        |               15 |             32 |         2.13 |
+|  clk_slow            | top/cpu/u_pc/mem[17][31]_i_4_6[0]  | btnC_IBUF        |                9 |             32 |         3.56 |
+|  clk_slow            | top/cpu/u_pc/mem[1][31]_i_5_3[0]   | btnC_IBUF        |               10 |             32 |         3.20 |
+|  clk_slow            | top/cpu/u_pc/mem[1][31]_i_5_5[0]   | btnC_IBUF        |                9 |             32 |         3.56 |
+|  clk_slow            | top/cpu/u_pc/mem[224][31]_i_4_0[0] | btnC_IBUF        |               14 |             32 |         2.29 |
+|  clk_slow            | top/cpu/u_pc/mem[17][31]_i_4_1[0]  | btnC_IBUF        |               10 |             32 |         3.20 |
+|  clk_slow            | top/cpu/u_pc/mem[17][31]_i_4_3[0]  | btnC_IBUF        |                7 |             32 |         4.57 |
+|  clk_slow            | top/cpu/u_pc/mem[257][31]_i_4_1[0] | btnC_IBUF        |               10 |             32 |         3.20 |
+|  clk_slow            | top/cpu/u_pc/mem[257][31]_i_4_4[0] | btnC_IBUF        |               18 |             32 |         1.78 |
+|  clk_slow            | top/cpu/u_pc/mem[224][31]_i_3_0[0] | btnC_IBUF        |               11 |             32 |         2.91 |
+|  clk_slow            | top/cpu/u_pc/mem[1][31]_i_5_7[0]   | btnC_IBUF        |                9 |             32 |         3.56 |
+|  clk_slow            | top/cpu/u_pc/mem[193][31]_i_4_2[0] | btnC_IBUF        |               11 |             32 |         2.91 |
+|  clk_slow            | top/cpu/u_pc/mem[1][31]_i_4_8[0]   | btnC_IBUF        |                9 |             32 |         3.56 |
+|  clk_slow            | top/cpu/u_pc/mem[178][31]_i_2_0[0] | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/mem[17][31]_i_4_0[0]  | btnC_IBUF        |               11 |             32 |         2.91 |
+|  clk_slow            | top/cpu/u_pc/mem[193][31]_i_4_1[0] | btnC_IBUF        |               10 |             32 |         3.20 |
+|  clk_slow            | top/cpu/u_pc/mem[1][31]_i_4_7[0]   | btnC_IBUF        |               10 |             32 |         3.20 |
+|  clk_slow            | top/cpu/u_pc/mem[200][31]_i_2_0[0] | btnC_IBUF        |               17 |             32 |         1.88 |
+|  clk_slow            | top/cpu/u_pc/mem[201][31]_i_2_0[0] | btnC_IBUF        |               11 |             32 |         2.91 |
+|  clk_slow            | top/cpu/u_pc/mem[257][31]_i_4_5[0] | btnC_IBUF        |               10 |             32 |         3.20 |
+|  clk_slow            | top/cpu/u_pc/mem[272][31]_i_2_2[0] | btnC_IBUF        |               14 |             32 |         2.29 |
+|  clk_slow            | top/cpu/u_pc/mem[1][31]_i_5_1[0]   | btnC_IBUF        |               10 |             32 |         3.20 |
+|  clk_slow            | top/cpu/u_pc/mem[272][31]_i_2_3[0] | btnC_IBUF        |               18 |             32 |         1.78 |
+|  clk_slow            | top/cpu/u_pc/mem[1][31]_i_5_2[0]   | btnC_IBUF        |               11 |             32 |         2.91 |
+|  clk_slow            | top/cpu/u_pc/mem[289][31]_i_4_0[0] | btnC_IBUF        |               16 |             32 |         2.00 |
+|  clk_slow            | top/cpu/u_pc/mem[201][31]_i_2_1[0] | btnC_IBUF        |               18 |             32 |         1.78 |
+|  clk_slow            | top/cpu/u_pc/mem[1][31]_i_5_4[0]   | btnC_IBUF        |                9 |             32 |         3.56 |
+|  clk_slow            | top/cpu/u_pc/mem[289][31]_i_4_1[0] | btnC_IBUF        |               16 |             32 |         2.00 |
+|  clk_slow            | top/cpu/u_pc/mem[17][31]_i_4_2[0]  | btnC_IBUF        |                8 |             32 |         4.00 |
+|  clk_slow            | top/cpu/u_pc/mem[193][31]_i_4_0[0] | btnC_IBUF        |               11 |             32 |         2.91 |
+|  clk_slow            | top/cpu/u_pc/mem[1][31]_i_4_1[0]   | btnC_IBUF        |               10 |             32 |         3.20 |
+|  clk_slow            | top/cpu/u_pc/mem[1][31]_i_4_4[0]   | btnC_IBUF        |               14 |             32 |         2.29 |
+|  clk_slow            | top/cpu/u_pc/mem[1][31]_i_4_6[0]   | btnC_IBUF        |               11 |             32 |         2.91 |
+|  clk_slow            | top/cpu/u_pc/mem[17][31]_i_4_5[0]  | btnC_IBUF        |                9 |             32 |         3.56 |
+|  clk_slow            | top/cpu/u_pc/mem[1][31]_i_4_3[0]   | btnC_IBUF        |               18 |             32 |         1.78 |
+|  clk_slow            | top/cpu/u_pc/mem[1][31]_i_4_11[0]  | btnC_IBUF        |               11 |             32 |         2.91 |
+|  clk_slow            | top/cpu/u_pc/mem[193][31]_i_4_3[0] | btnC_IBUF        |               11 |             32 |         2.91 |
+|  clk_slow            | top/cpu/u_pc/mem[193][31]_i_4_4[0] | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/mem[196][31]_i_2_1[0] | btnC_IBUF        |               10 |             32 |         3.20 |
+|  clk_slow            | top/cpu/u_pc/mem[1][31]_i_4_10[0]  | btnC_IBUF        |               14 |             32 |         2.29 |
+|  clk_slow            | top/cpu/u_pc/mem[191][31]_i_2_0[0] | btnC_IBUF        |               11 |             32 |         2.91 |
+|  clk_slow            | top/cpu/u_pc/mem[1][31]_i_4_5[0]   | btnC_IBUF        |                9 |             32 |         3.56 |
+|  clk_slow            | top/cpu/u_pc/mem[1][31]_i_4_9[0]   | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/mem[201][31]_i_2_2[0] | btnC_IBUF        |               22 |             32 |         1.45 |
+|  clk_slow            | top/cpu/u_pc/mem[197][31]_i_2_0[0] | btnC_IBUF        |               11 |             32 |         2.91 |
+|  clk_slow            | top/cpu/u_pc/mem[1][31]_i_4_2[0]   | btnC_IBUF        |               10 |             32 |         3.20 |
+|  clk_slow            | top/cpu/u_pc/mem[1][31]_i_5_0[0]   | btnC_IBUF        |                8 |             32 |         4.00 |
+|  clk_slow            | top/cpu/u_pc/mem[227][31]_i_2_0[0] | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/mem[232][31]_i_2_0[0] | btnC_IBUF        |               16 |             32 |         2.00 |
+|  clk_slow            | top/cpu/u_pc/mem[240][31]_i_3_0[0] | btnC_IBUF        |                9 |             32 |         3.56 |
+|  clk_slow            | top/cpu/u_pc/mem[240][31]_i_4_0[0] | btnC_IBUF        |               16 |             32 |         2.00 |
+|  clk_slow            | top/cpu/u_pc/mem[257][31]_i_4_0[0] | btnC_IBUF        |               10 |             32 |         3.20 |
+|  clk_slow            | top/cpu/u_pc/mem[257][31]_i_4_2[0] | btnC_IBUF        |                9 |             32 |         3.56 |
+|  clk_slow            | top/cpu/u_pc/mem[45][31]_i_2_21[0] | btnC_IBUF        |               14 |             32 |         2.29 |
+|  clk_slow            | top/cpu/u_pc/mem[289][31]_i_4_4[0] | btnC_IBUF        |               11 |             32 |         2.91 |
+|  clk_slow            | top/cpu/u_pc/mem[450][31]_i_2_0[0] | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/mem[45][31]_i_2_11[0] | btnC_IBUF        |               11 |             32 |         2.91 |
+|  clk_slow            | top/cpu/u_pc/mem[45][31]_i_2_26[0] | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/mem[45][31]_i_2_22[0] | btnC_IBUF        |               11 |             32 |         2.91 |
+|  clk_slow            | top/cpu/u_pc/mem[389][31]_i_2_0[0] | btnC_IBUF        |               15 |             32 |         2.13 |
+|  clk_slow            | top/cpu/u_pc/mem[45][31]_i_2_27[0] | btnC_IBUF        |               16 |             32 |         2.00 |
+|  clk_slow            | top/cpu/u_pc/mem[45][31]_i_2_24[0] | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/mem[45][31]_i_2_29[0] | btnC_IBUF        |               10 |             32 |         3.20 |
+|  clk_slow            | top/cpu/u_pc/mem[45][31]_i_2_30[0] | btnC_IBUF        |               14 |             32 |         2.29 |
+|  clk_slow            | top/cpu/u_pc/mem[45][31]_i_2_33[0] | btnC_IBUF        |               11 |             32 |         2.91 |
+|  clk_slow            | top/cpu/u_pc/mem[321][31]_i_3_2[0] | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/mem[45][31]_i_2_10[0] | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/mem[352][31]_i_3_0[0] | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/mem[33][31]_i_3_4[0]  | btnC_IBUF        |                8 |             32 |         4.00 |
+|  clk_slow            | top/cpu/u_pc/mem[45][31]_i_2_5[0]  | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/mem[289][31]_i_4_3[0] | btnC_IBUF        |               17 |             32 |         1.88 |
+|  clk_slow            | top/cpu/u_pc/mem[416][31]_i_2_0[0] | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/mem[45][31]_i_2_1[0]  | btnC_IBUF        |               16 |             32 |         2.00 |
+|  clk_slow            | top/cpu/u_pc/mem[45][31]_i_2_32[0] | btnC_IBUF        |               14 |             32 |         2.29 |
+|  clk_slow            | top/cpu/u_pc/mem[45][31]_i_2_4[0]  | btnC_IBUF        |               11 |             32 |         2.91 |
+|  clk_slow            | top/cpu/u_pc/mem[394][31]_i_2_0[0] | btnC_IBUF        |               15 |             32 |         2.13 |
+|  clk_slow            | top/cpu/u_pc/mem[337][31]_i_2_0[0] | btnC_IBUF        |               11 |             32 |         2.91 |
+|  clk_slow            | top/cpu/u_pc/mem[384][31]_i_5_0[0] | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/mem[448][31]_i_5_0[0] | btnC_IBUF        |               15 |             32 |         2.13 |
+|  clk_slow            | top/cpu/u_pc/mem[45][31]_i_2_15[0] | btnC_IBUF        |               10 |             32 |         3.20 |
+|  clk_slow            | top/cpu/u_pc/mem[45][31]_i_2_16[0] | btnC_IBUF        |               10 |             32 |         3.20 |
+|  clk_slow            | top/cpu/u_pc/mem[45][31]_i_2_2[0]  | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/mem[45][31]_i_2_3[0]  | btnC_IBUF        |               14 |             32 |         2.29 |
+|  clk_slow            | top/cpu/u_pc/mem[448][31]_i_4_0[0] | btnC_IBUF        |               11 |             32 |         2.91 |
+|  clk_slow            | top/cpu/u_pc/mem[321][31]_i_3_3[0] | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/mem[45][31]_i_2_28[0] | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/mem[45][31]_i_2_31[0] | btnC_IBUF        |               10 |             32 |         3.20 |
+|  clk_slow            | top/cpu/u_pc/mem[45][31]_i_2_6[0]  | btnC_IBUF        |               15 |             32 |         2.13 |
+|  clk_slow            | top/cpu/u_pc/mem[45][31]_i_2_7[0]  | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/mem[45][31]_i_2_8[0]  | btnC_IBUF        |               11 |             32 |         2.91 |
+|  clk_slow            | top/cpu/u_pc/mem[45][31]_i_2_9[0]  | btnC_IBUF        |               15 |             32 |         2.13 |
+|  clk_slow            | top/cpu/u_pc/mem[464][31]_i_3_0[0] | btnC_IBUF        |               10 |             32 |         3.20 |
+|  clk_slow            | top/cpu/u_pc/mem[33][31]_i_3_3[0]  | btnC_IBUF        |                9 |             32 |         3.56 |
+|  clk_slow            | top/cpu/u_pc/mem[393][31]_i_2_0[0] | btnC_IBUF        |               15 |             32 |         2.13 |
+|  clk_slow            | top/cpu/u_pc/mem[45][31]_i_2_12[0] | btnC_IBUF        |                9 |             32 |         3.56 |
+|  clk_slow            | top/cpu/u_pc/mem[321][31]_i_3_1[0] | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/mem[45][31]_i_2_14[0] | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/mem[33][31]_i_3_1[0]  | btnC_IBUF        |                9 |             32 |         3.56 |
+|  clk_slow            | top/cpu/u_pc/mem[45][31]_i_2_23[0] | btnC_IBUF        |               14 |             32 |         2.29 |
+|  clk_slow            | top/cpu/u_pc/mem[45][31]_i_2_25[0] | btnC_IBUF        |               15 |             32 |         2.13 |
+|  clk_slow            | top/cpu/u_pc/mem[321][31]_i_3_0[0] | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/mem[387][31]_i_2_0[0] | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/mem[400][31]_i_2_0[0] | btnC_IBUF        |               15 |             32 |         2.13 |
+|  clk_slow            | top/cpu/u_pc/mem[33][31]_i_3_2[0]  | btnC_IBUF        |               10 |             32 |         3.20 |
+|  clk_slow            | top/cpu/u_pc/mem[401][31]_i_2_0[0] | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/mem[384][31]_i_6_0[0] | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/mem[408][31]_i_2_0[0] | btnC_IBUF        |               14 |             32 |         2.29 |
+|  clk_slow            | top/cpu/u_pc/mem[456][31]_i_2_0[0] | btnC_IBUF        |               11 |             32 |         2.91 |
+|  clk_slow            | top/cpu/u_pc/mem[45][31]_i_2_0[0]  | btnC_IBUF        |               11 |             32 |         2.91 |
+|  clk_slow            | top/cpu/u_pc/mem[45][31]_i_2_13[0] | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/mem[45][31]_i_2_17[0] | btnC_IBUF        |                9 |             32 |         3.56 |
+|  clk_slow            | top/cpu/u_pc/mem[45][31]_i_2_18[0] | btnC_IBUF        |                8 |             32 |         4.00 |
+|  clk_slow            | top/cpu/u_pc/mem[45][31]_i_2_20[0] | btnC_IBUF        |               14 |             32 |         2.29 |
+|  clk_slow            | top/cpu/u_pc/mem[33][31]_i_3_0[0]  | btnC_IBUF        |                8 |             32 |         4.00 |
+|  clk_slow            | top/cpu/u_pc/mem[33][31]_i_3_5[0]  | btnC_IBUF        |                9 |             32 |         3.56 |
+|  clk_slow            | top/cpu/u_pc/mem[33][31]_i_3_6[0]  | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/mem[45][31]_i_2_19[0] | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/mem[48][31]_i_4_8[0]  | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/mem[77][31]_i_2_13[0] | btnC_IBUF        |               14 |             32 |         2.29 |
+|  clk_slow            | top/cpu/u_pc/mem[65][31]_i_3_4[0]  | btnC_IBUF        |               14 |             32 |         2.29 |
+|  clk_slow            | top/cpu/u_pc/mem[77][31]_i_2_15[0] | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/mem[77][31]_i_2_17[0] | btnC_IBUF        |               14 |             32 |         2.29 |
+|  clk_slow            | top/cpu/u_pc/mem[77][31]_i_2_20[0] | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/mem[65][31]_i_3_0[0]  | btnC_IBUF        |               15 |             32 |         2.13 |
+|  clk_slow            | top/cpu/u_pc/mem[48][31]_i_4_15[0] | btnC_IBUF        |               10 |             32 |         3.20 |
+|  clk_slow            | top/cpu/u_pc/mem[48][31]_i_4_5[0]  | btnC_IBUF        |               14 |             32 |         2.29 |
+|  clk_slow            | top/cpu/u_pc/mem[48][31]_i_4_11[0] | btnC_IBUF        |               16 |             32 |         2.00 |
+|  clk_slow            | top/cpu/u_pc/mem[48][31]_i_4_7[0]  | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/mem[64][31]_i_6_0[0]  | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/mem[77][31]_i_2_21[0] | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/mem[77][31]_i_2_25[0] | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/mem[77][31]_i_2_26[0] | btnC_IBUF        |               15 |             32 |         2.13 |
+|  clk_slow            | top/cpu/u_pc/mem[77][31]_i_2_27[0] | btnC_IBUF        |               10 |             32 |         3.20 |
+|  clk_slow            | top/cpu/u_pc/mem[77][31]_i_2_28[0] | btnC_IBUF        |               10 |             32 |         3.20 |
+|  clk_slow            | top/cpu/u_pc/mem[499][31]_i_3_0[0] | btnC_IBUF        |               17 |             32 |         1.88 |
+|  clk_slow            | top/cpu/u_pc/mem[65][31]_i_3_6[0]  | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/mem[48][31]_i_4_12[0] | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/mem[57][31]_i_2_5[0]  | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/mem[77][31]_i_2_1[0]  | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/mem[77][31]_i_2_19[0] | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/mem[77][31]_i_2_24[0] | btnC_IBUF        |               15 |             32 |         2.13 |
+|  clk_slow            | top/cpu/u_pc/mem[487][31]_i_2_0[0] | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/mem[48][31]_i_4_9[0]  | btnC_IBUF        |               11 |             32 |         2.91 |
+|  clk_slow            | top/cpu/u_pc/mem[48][31]_i_3_1[0]  | btnC_IBUF        |                9 |             32 |         3.56 |
+|  clk_slow            | top/cpu/u_pc/mem[57][31]_i_2_4[0]  | btnC_IBUF        |               11 |             32 |         2.91 |
+|  clk_slow            | top/cpu/u_pc/mem[57][31]_i_2_0[0]  | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/mem[48][31]_i_4_10[0] | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/mem[48][31]_i_3_3[0]  | btnC_IBUF        |                9 |             32 |         3.56 |
+|  clk_slow            | top/cpu/u_pc/mem[57][31]_i_2_3[0]  | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/mem[57][31]_i_2_6[0]  | btnC_IBUF        |               15 |             32 |         2.13 |
+|  clk_slow            | top/cpu/u_pc/mem[65][31]_i_3_5[0]  | btnC_IBUF        |               14 |             32 |         2.29 |
+|  clk_slow            | top/cpu/u_pc/mem[77][31]_i_2_11[0] | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/mem[77][31]_i_2_14[0] | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/mem[77][31]_i_2_16[0] | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/mem[48][31]_i_4_0[0]  | btnC_IBUF        |               11 |             32 |         2.91 |
+|  clk_slow            | top/cpu/u_pc/mem[65][31]_i_3_3[0]  | btnC_IBUF        |               14 |             32 |         2.29 |
+|  clk_slow            | top/cpu/u_pc/mem[77][31]_i_2_10[0] | btnC_IBUF        |               10 |             32 |         3.20 |
+|  clk_slow            | top/cpu/u_pc/mem[48][31]_i_4_3[0]  | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/mem[77][31]_i_2_18[0] | btnC_IBUF        |               11 |             32 |         2.91 |
+|  clk_slow            | top/cpu/u_pc/mem[77][31]_i_2_2[0]  | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/mem[77][31]_i_2_0[0]  | btnC_IBUF        |               10 |             32 |         3.20 |
+|  clk_slow            | top/cpu/u_pc/mem[48][31]_i_4_2[0]  | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/mem[77][31]_i_2_22[0] | btnC_IBUF        |               16 |             32 |         2.00 |
+|  clk_slow            | top/cpu/u_pc/mem[57][31]_i_2_7[0]  | btnC_IBUF        |               11 |             32 |         2.91 |
+|  clk_slow            | top/cpu/u_pc/mem[77][31]_i_2_23[0] | btnC_IBUF        |               15 |             32 |         2.13 |
+|  clk_slow            | top/cpu/u_pc/mem[48][31]_i_3_0[0]  | btnC_IBUF        |                8 |             32 |         4.00 |
+|  clk_slow            | top/cpu/u_pc/mem[48][31]_i_4_14[0] | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/mem[57][31]_i_2_2[0]  | btnC_IBUF        |               17 |             32 |         1.88 |
+|  clk_slow            | top/cpu/u_pc/mem[48][31]_i_4_4[0]  | btnC_IBUF        |               14 |             32 |         2.29 |
+|  clk_slow            | top/cpu/u_pc/mem[57][31]_i_2_1[0]  | btnC_IBUF        |               17 |             32 |         1.88 |
+|  clk_slow            | top/cpu/u_pc/mem[65][31]_i_3_1[0]  | btnC_IBUF        |               12 |             32 |         2.67 |
+|  clk_slow            | top/cpu/u_pc/mem[48][31]_i_4_13[0] | btnC_IBUF        |               11 |             32 |         2.91 |
+|  clk_slow            | top/cpu/u_pc/mem[48][31]_i_4_1[0]  | btnC_IBUF        |               14 |             32 |         2.29 |
+|  clk_slow            | top/cpu/u_pc/mem[491][31]_i_2_0[0] | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/mem[57][31]_i_2_9[0]  | btnC_IBUF        |               15 |             32 |         2.13 |
+|  clk_slow            | top/cpu/u_pc/mem[480][31]_i_2_0[0] | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/mem[57][31]_i_2_8[0]  | btnC_IBUF        |               13 |             32 |         2.46 |
+|  clk_slow            | top/cpu/u_pc/mem[65][31]_i_3_2[0]  | btnC_IBUF        |               16 |             32 |         2.00 |
+|  clk_slow            | top/cpu/u_pc/mem[48][31]_i_3_2[0]  | btnC_IBUF        |                9 |             32 |         3.56 |
+|  clk_slow            | top/cpu/u_pc/mem[48][31]_i_4_6[0]  | btnC_IBUF        |               13 |             32 |         2.46 |
+|  CLK100MHZ_IBUF_BUFG |                                    | btnC_IBUF        |               10 |             47 |         4.70 |
++----------------------+------------------------------------+------------------+------------------+----------------+--------------+
+
+
