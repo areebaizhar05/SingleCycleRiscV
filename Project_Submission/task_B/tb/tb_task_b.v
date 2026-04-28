@@ -6,6 +6,9 @@ module tb_task_b;
     reg [15:0] sw;
     wire [15:0] led;
 
+    wire [15:0] seg_data;
+    wire out_Jump, out_Branch, out_LUI;
+
     // Task B: Demonstrates LUI, JAL, BNE
     TopLevelProcessor #(
         .INIT_FILE("taskb.mem")
@@ -13,7 +16,11 @@ module tb_task_b;
         .clk(clk),
         .rst(rst),
         .sw(sw),
-        .led(led)
+        .led(led),
+        .seg_data(seg_data),
+        .out_Jump(out_Jump),
+        .out_Branch(out_Branch),
+        .out_LUI(out_LUI)
     );
 
     always #5 clk = ~clk;

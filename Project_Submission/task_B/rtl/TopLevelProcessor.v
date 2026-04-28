@@ -25,7 +25,10 @@ module TopLevelProcessor #(
     input  wire        rst,
     input  wire [15:0] sw,   // physical switches -> address 768 (0x300)
     output wire [15:0] led,  // physical LEDs     <- address 512 (0x200) lower 16 bits
-    output wire [15:0] seg_data // 7-segment data <- address 512 (0x200) upper 16 bits
+    output wire [15:0] seg_data, // 7-segment data <- address 512 (0x200) upper 16 bits
+    output wire        out_Jump,
+    output wire        out_Branch,
+    output wire        out_LUI
 );
 
     // ================================================================
@@ -209,5 +212,10 @@ module TopLevelProcessor #(
         .leds       (led),
         .seg_data   (seg_data)
     );
+
+    // Export internal control signals for FPGA visual debugging
+    assign out_Jump = Jump | JumpR;
+    assign out_Branch = Branch;
+    assign out_LUI = LUI;
 
 endmodule

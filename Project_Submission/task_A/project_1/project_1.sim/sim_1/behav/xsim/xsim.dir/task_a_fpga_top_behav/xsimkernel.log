@@ -2,3 +2,6 @@ Running: xsim.dir/task_a_fpga_top_behav/xsimk.exe -simmode gui -wdb task_a_fpga_
 Design successfully loaded
 Design Loading Memory Usage: 8924 KB (Peak: 8924 KB)
 Design Loading CPU Usage: 77 ms
+Simulation completed
+Simulation Memory Usage: 9844 KB (Peak: 9844 KB)
+Simulation CPU Usage: 108 ms

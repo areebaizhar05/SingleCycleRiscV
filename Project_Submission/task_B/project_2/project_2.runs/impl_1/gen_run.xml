@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1777363785">
+  <File Type="ROUTE-PWR" Name="task_b_fpga_top_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="task_b_fpga_top.tcl"/>
+  <File Type="ROUTE-PWR-SUM" Name="task_b_fpga_top_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="task_b_fpga_top_reports.tcl"/>
+  <File Type="BITSTR-MSK" Name="task_b_fpga_top.msk"/>
+  <File Type="ROUTE-CLK" Name="task_b_fpga_top_clock_utilization_routed.rpt"/>
+  <File Type="RDI-RDI" Name="task_b_fpga_top.vdi"/>
+  <File Type="BG-BIT" Name="task_b_fpga_top.bit"/>
+  <File Type="BG-DRC" Name="task_b_fpga_top.drc"/>
+  <File Type="BG-BGN" Name="task_b_fpga_top.bgn"/>
+  <File Type="BG-BIN" Name="task_b_fpga_top.bin"/>
+  <File Type="BITSTR-RBT" Name="task_b_fpga_top.rbt"/>
+  <File Type="BITSTR-NKY" Name="task_b_fpga_top.nky"/>
+  <File Type="BITSTR-BMM" Name="task_b_fpga_top_bd.bmm"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="task_b_fpga_top_methodology_drc_routed.rpt"/>
+  <File Type="BITSTR-MMI" Name="task_b_fpga_top.mmi"/>
+  <File Type="BITSTR-SYSDEF" Name="task_b_fpga_top.sysdef"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="task_b_fpga_top.ltx"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="OPT-DRC" Name="task_b_fpga_top_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="task_b_fpga_top.hwdef"/>
+  <File Type="PLACE-IO" Name="task_b_fpga_top_io_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="task_b_fpga_top_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="task_b_fpga_top_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="task_b_fpga_top_control_sets_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="task_b_fpga_top_incremental_reuse_pre_placed.rpt"/>
+  <File Type="ROUTE-DRC" Name="task_b_fpga_top_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="task_b_fpga_top_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="task_b_fpga_top_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="task_b_fpga_top_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="task_b_fpga_top_route_status.pb"/>
+  <File Type="ROUTE-DCP" Name="task_b_fpga_top_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="task_b_fpga_top_routed_error.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="task_b_fpga_top_routed_bb.dcp"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="task_b_fpga_top_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="task_b_fpga_top_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="task_b_fpga_top_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-BUS-SKEW" Name="task_b_fpga_top_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="task_b_fpga_top_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="task_b_fpga_top_bus_skew_routed.rpx"/>
+  <File Type="OPT-DCP" Name="task_b_fpga_top_opt.dcp"/>
+  <File Type="PLACE-DCP" Name="task_b_fpga_top_placed.dcp"/>
+  <File Type="PWROPT-DCP" Name="task_b_fpga_top_pwropt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="task_b_fpga_top_postplace_pwropt.dcp"/>
+  <File Type="PHYSOPT-DCP" Name="task_b_fpga_top_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="task_b_fpga_top_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="task_b_fpga_top_postroute_physopt_bb.dcp"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="task_b_fpga_top_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="task_b_fpga_top_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="task_b_fpga_top_methodology_drc_routed.rpx"/>
+  <File Type="PDI-FILE" Name="task_b_fpga_top.pdi"/>
+  <File Type="RCFI_FILE" Name="task_b_fpga_top.rcfi"/>
+  <File Type="CFI_FILE" Name="task_b_fpga_top.cfi"/>
+  <File Type="RNPI_FILE" Name="task_b_fpga_top.rnpi"/>
+  <File Type="NPI_FILE" Name="task_b_fpga_top.npi"/>
+  <File Type="RBD_FILE" Name="task_b_fpga_top.rbd"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/AddressDecoder.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../rtl/AddressDecoder.v"/>
+        <Attr Name="ImportTime" Val="1777187897"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/DataMemory.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../rtl/DataMemory.v"/>
+        <Attr Name="ImportTime" Val="1777187897"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/ProgramCounter.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../rtl/ProgramCounter.v"/>
+        <Attr Name="ImportTime" Val="1777187897"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/Registerfile.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../rtl/Registerfile.v"/>
+        <Attr Name="ImportTime" Val="1777187897"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/TopLevelProcessor.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../rtl/TopLevelProcessor.v"/>
+        <Attr Name="ImportTime" Val="1777302629"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/addressDecoderTop.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../rtl/addressDecoderTop.v"/>
+        <Attr Name="ImportTime" Val="1777302615"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/alu.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../rtl/alu.v"/>
+        <Attr Name="ImportTime" Val="1777187897"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/alu_32bit.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../rtl/alu_32bit.v"/>
+        <Attr Name="ImportTime" Val="1777187897"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/alu_control.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../rtl/alu_control.v"/>
+        <Attr Name="ImportTime" Val="1777187897"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/and_gate.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../rtl/and_gate.v"/>
+        <Attr Name="ImportTime" Val="1777187897"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/branchAdder.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../rtl/branchAdder.v"/>
+        <Attr Name="ImportTime" Val="1777187897"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/clock_divider.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../rtl/clock_divider.v"/>
+        <Attr Name="ImportTime" Val="1777187897"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/debouncer.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../rtl/debouncer.v"/>
+        <Attr Name="ImportTime" Val="1777187897"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/full_adder.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../rtl/full_adder.v"/>
+        <Attr Name="ImportTime" Val="1777187897"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/immGen.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../rtl/immGen.v"/>
+        <Attr Name="ImportTime" Val="1777187897"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/instructionMemory.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../rtl/instructionMemory.v"/>
+        <Attr Name="ImportTime" Val="1777286062"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/leds.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../rtl/leds.v"/>
+        <Attr Name="ImportTime" Val="1777187897"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/main_control.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../rtl/main_control.v"/>
+        <Attr Name="ImportTime" Val="1777222969"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/mux2.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../rtl/mux2.v"/>
+        <Attr Name="ImportTime" Val="1777187897"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/or_gate.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../rtl/or_gate.v"/>
+        <Attr Name="ImportTime" Val="1777187897"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/pcAdder.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../rtl/pcAdder.v"/>
+        <Attr Name="ImportTime" Val="1777187897"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/riscv_fpga_top.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../rtl/riscv_fpga_top.v"/>
+        <Attr Name="ImportTime" Val="1777302643"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/seven_seg_controller.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../rtl/seven_seg_controller.v"/>
+        <Attr Name="ImportTime" Val="1777302582"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/shifter_32bit.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../rtl/shifter_32bit.v"/>
+        <Attr Name="ImportTime" Val="1777187897"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/switches.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../rtl/switches.v"/>
+        <Attr Name="ImportTime" Val="1777302601"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/xor_gate.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../rtl/xor_gate.v"/>
+        <Attr Name="ImportTime" Val="1777187897"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl/task_b_fpga_top.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../rtl/task_b_fpga_top.v"/>
+        <Attr Name="ImportTime" Val="1777302671"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/assembly_code/taskb.mem">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../assembly_code/taskb.mem"/>
+        <Attr Name="ImportTime" Val="1777302784"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="task_b_fpga_top"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/files/Basys3.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../task_A/project_1/project_1.srcs/constrs_1/imports/files/Basys3.xdc"/>
+        <Attr Name="ImportTime" Val="1777360794"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>
