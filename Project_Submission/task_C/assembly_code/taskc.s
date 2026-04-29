@@ -1,31 +1,52 @@
-# taskc.s
-# Summation of arithmetic sequence from switch input N
-# Sum = N + (N-1) + ... + 1
-# Lower 16 bits -> LEDs
-# Upper 16 bits -> 7-Segment Display
-# Required instructions: LUI, JAL, BNE
+# ==========================================
+# PART C: VISUAL ACCUMULATOR
+# Features: bne, jal, lui, jalr
+# ==========================================
 
 main:
-    addi x30, x0, 768          # Switch address (0x300)
-    addi x31, x0, 512          # Output address (0x200)
+    addi x30, x0, 768       # x30 = Switch Address (0x300)
+    addi x31, x0, 512       # x31 = LED/7-Seg Address (0x200)
 
-read_input:
-    lw x5, 0(x30)              # Read N from switches
-    beq x5, x0, read_input     # Wait if N = 0
-    add x6, x0, x0             # SUM = 0
-    add x7, x0, x5             # COUNTER = N
+# 1. POLL SWITCHES UNTIL INPUT != 0
+poll:
+    lw x10, 0(x30)          # x10 = Read switches (this is our 'N')
+    addi x11, x0, 0         # x11 = 0
+    bne x10, x11, init      # If input != 0, break out of poll loop
+    jal x0, poll            # Else, jump back and keep polling
 
-sum_loop:
-    jal ra, add_subroutine     # [JAL] Call subroutine, SUM += COUNTER
-    addi x7, x7, -1            # COUNTER--
-    bne x7, x0, sum_loop       # [BNE] Loop if COUNTER != 0
+# 2. INITIALIZE ACCUMULATOR
+init:
+    addi x12, x0, 0         # x12 = Sum Accumulator = 0
 
-display:
-    lui x8, 0x00001            # [LUI] x8 = 0x00001000, upper 16 = 0x0000
-    add x6, x6, x8             # Merge LUI value with SUM
-    sw x6, 0(x31)              # Write to output, lower 16 -> LEDs, upper 16 -> 7-seg
-    beq x0, x0, read_input     # Go back, read next input
+# 3. ACCUMULATOR LOOP
+calc_loop:
+    bne x10, x0, do_add     # If N != 0, continue adding
+    jal x0, halt            # If N == 0, we are done! Jump to halt
 
-add_subroutine:
-    add x6, x6, x7             # SUM = SUM + COUNTER
-    jalr x0, ra, 0             # Return
+do_add:
+    add x12, x12, x10       # sum = sum + N
+    addi x10, x10, -1       # N = N - 1
+    
+    # Show current running sum on LEDs
+    sw x12, 0(x31)
+    
+    # Call delay subroutine so we can see the addition happening visually!
+    jal ra, delay
+    
+    # Loop back for the next number
+    jal x0, calc_loop
+
+# 4. HALT AND FREEZE FINAL ANSWER
+halt:
+    jal x0, halt            # Infinite loop to freeze the final result on LEDs
+
+# 5. DELAY SUBROUTINE (Uses LUI and BNE)
+delay:
+    # Use LUI to load a large delay value for a visible pause (~0.5 seconds at 25MHz)
+    lui x13, 0x01000        
+delay_loop:
+    addi x13, x13, -1
+    bne x13, x0, delay_loop # Keep decrementing until 0
+    
+    # Return to caller
+    jalr x0, 0(ra)
