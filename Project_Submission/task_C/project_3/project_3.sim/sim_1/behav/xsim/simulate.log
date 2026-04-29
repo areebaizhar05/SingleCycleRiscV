@@ -1,0 +1,6 @@
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+n=1 | led=0x0001 | seg=0xabcd | Exp=0x0001 | PASS
+n=2 | led=0x0000 | seg=0x0000 | Exp=0x0003 | FAIL
+n=3 | led=0x0000 | seg=0x0000 | Exp=0x0006 | FAIL
+n=4 | led=0x0000 | seg=0x0000 | Exp=0x000A | FAIL

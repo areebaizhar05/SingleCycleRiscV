@@ -1,86 +1,82 @@
 `timescale 1ns / 1ps
 
 module tb_task_c;
-    reg         CLK100MHZ;
-    reg         btnC;
+    reg         clk;
+    reg         rst;
     reg  [15:0] sw;
     wire [15:0] led;
-    wire [6:0]  seg;
-    wire [3:0]  an;
+    wire [15:0] seg_data;
 
-    task_a_fpga_top dut (
-        .CLK100MHZ (CLK100MHZ),
-        .btnC      (btnC),
-        .sw        (sw),
-        .led       (led),
-        .seg       (seg),
-        .an        (an)
+    TopLevelProcessor #(
+        .INIT_FILE("taskc copy.mem")
+    ) dut (
+        .clk     (clk),
+        .rst     (rst),
+        .sw      (sw),
+        .led     (led),
+        .seg_data(seg_data)
     );
 
-    always #5 CLK100MHZ = ~CLK100MHZ;
-
-    integer pass_count;
-    integer fail_count;
-
-    task run_test;
-        input  integer n_val;
-        input  [15:0]  sw_val;
-        input  [15:0]  expected;
-        begin
-            // Step 1: all switches OFF, assert reset
-            sw   = 16'h0000;
-            btnC = 1;
-            #1000;
-
-            // Step 2: release reset ? processor reaches POLL loop
-            btnC = 0;
-            #(5_000_000);
-
-            // Step 3: flip the target switch ON
-            sw = sw_val;
-
-            // Step 4: wait for computation (worst case n=5 ? 35 ms)
-            #(50_000_000);
-
-            // Step 5: check result
-            if (led === expected) begin
-                $display("[%0t ns]  [PASS]  switch %0d ON (sw=0x%04X)  |  led = 0x%04X  |  expected = 0x%04X",
-                         $time, n_val, sw_val, led, expected);
-                pass_count = pass_count + 1;
-            end
-            else begin
-                $display("[%0t ns]  [FAIL]  switch %0d ON (sw=0x%04X)  |  led = 0x%04X  |  expected = 0x%04X",
-                         $time, n_val, sw_val, led, expected);
-                fail_count = fail_count + 1;
-            end
-        end
-    endtask
+    always #5 clk = ~clk;
 
     initial begin
-        CLK100MHZ = 0;
-        sw        = 16'h0000;
-        btnC      = 1;
-        pass_count = 0;
-        fail_count = 0;
+        clk = 0;
+        rst = 1;
+        sw  = 16'h0000;
+        #200;
+        rst = 0;
+        #500;
 
-        #2000;
+        // n=1: sum=1
+        sw = 16'h0001;
+        #20000;
+        $display("n=1 | led=0x%04X | seg=0x%04X | Exp=0x0001 | %s",
+                  led, seg_data, (led===16'h0001)?"PASS":"FAIL");
+        sw = 16'h0000; #5000;
 
-        // Switch 0 ON  ?  n=1  ?  sum = 1
-        run_test(0, 16'h0001, 16'h0001);
+        // n=2: sum=3
+        sw = 16'h0002;
+        #20000;
+        $display("n=2 | led=0x%04X | seg=0x%04X | Exp=0x0003 | %s",
+                  led, seg_data, (led===16'h0003)?"PASS":"FAIL");
+        sw = 16'h0000; #5000;
 
-        // Switch 1 ON  ?  n=2  ?  sum = 3
-        run_test(1, 16'h0002, 16'h0003);
+        // n=3: sum=6
+        sw = 16'h0003;
+        #20000;
+        $display("n=3 | led=0x%04X | seg=0x%04X | Exp=0x0006 | %s",
+                  led, seg_data, (led===16'h0006)?"PASS":"FAIL");
+        sw = 16'h0000; #5000;
 
-        // Switch 2 ON  ?  n=3  ?  sum = 6
-        run_test(2, 16'h0004, 16'h0006);
+        // n=4: sum=10
+        sw = 16'h0004;
+        #20000;
+        $display("n=4 | led=0x%04X | seg=0x%04X | Exp=0x000A | %s",
+                  led, seg_data, (led===16'h000A)?"PASS":"FAIL");
+        sw = 16'h0000; #5000;
 
-        // Switch 3 ON  ?  n=4  ?  sum = 10
-        run_test(3, 16'h0008, 16'h000A);
+        // n=5: sum=15
+        sw = 16'h0005;
+        #20000;
+        $display("n=5 | led=0x%04X | seg=0x%04X | Exp=0x000F | %s",
+                  led, seg_data, (led===16'h000F)?"PASS":"FAIL");
+        sw = 16'h0000; #5000;
 
-        // Switch 4 ON  ?  n=5  ?  sum = 15
-        run_test(4, 16'h0010, 16'h000F);
+        // n=6: sum=21
+        sw = 16'h0006;
+        #20000;
+        $display("n=6 | led=0x%04X | seg=0x%04X | Exp=0x0015 | %s",
+                  led, seg_data, (led===16'h0015)?"PASS":"FAIL");
+        sw = 16'h0000; #5000;
 
-        $display("RESULTS:  %0d PASS  /  %0d FAIL", pass_count, fail_count);
+        // n=7: sum=28
+        sw = 16'h0007;
+        #20000;
+        $display("n=7 | led=0x%04X | seg=0x%04X | Exp=0x001C | %s",
+                  led, seg_data, (led===16'h001C)?"PASS":"FAIL");
+        sw = 16'h0000; #5000;
+
+        $display("All tests done.");
         $finish;
     end
 
