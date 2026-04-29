@@ -19,7 +19,7 @@
 //     u_mmio        addressDecoderTop
 
 module TopLevelProcessor #(
-    parameter INIT_FILE = "instruction.mem"
+    parameter INIT_FILE = "taskc.mem"
 ) (
     input  wire        clk,
     input  wire        rst,

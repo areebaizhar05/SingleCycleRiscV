@@ -86,7 +86,10 @@ set_property ip_output_repo {c:/Users/Student/Downloads/CA project/SingleCycleRi
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_mem {{C:/Users/Student/Downloads/CA project/SingleCycleRiscV/Project_Submission/task_A/project_1/project_1.srcs/sources_1/imports/assembly_code/instruction.mem}}
+read_mem {
+  {C:/Users/Student/Downloads/CA project/SingleCycleRiscV/Project_Submission/task_A/project_1/project_1.srcs/sources_1/imports/assembly_code/instruction.mem}
+  {C:/Users/Student/Downloads/CA project/SingleCycleRiscV/Project_Submission/task_A/project_1/project_1.srcs/sources_1/imports/assembly_code/taskc.mem}
+}
 read_verilog -library xil_defaultlib {
   {C:/Users/Student/Downloads/CA project/SingleCycleRiscV/Project_Submission/task_A/project_1/project_1.srcs/sources_1/imports/rtl/AddressDecoder.v}
   {C:/Users/Student/Downloads/CA project/SingleCycleRiscV/Project_Submission/task_A/project_1/project_1.srcs/sources_1/imports/rtl/DataMemory.v}

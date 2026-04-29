@@ -10,7 +10,7 @@ module task_a_fpga_top (
 );
     // Task A: Demonstrates the base instruction.mem (Countdown FSM from Lab 10)
     riscv_fpga_top #(
-        .INIT_FILE("instruction.mem")
+        .INIT_FILE("taskc.mem")
     ) top (
         .CLK100MHZ(CLK100MHZ),
         .btnC(btnC),

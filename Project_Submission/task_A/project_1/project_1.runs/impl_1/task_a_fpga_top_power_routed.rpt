@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date             : Tue Apr 28 12:57:47 2026
+| Date             : Wed Apr 29 15:23:20 2026
 | Host             : DESKTOP-KNMORIL running 64-bit major release  (build 9200)
 | Command          : report_power -file task_a_fpga_top_power_routed.rpt -pb task_a_fpga_top_power_summary_routed.pb -rpx task_a_fpga_top_power_routed.rpx
 | Design           : task_a_fpga_top
@@ -33,7 +33,7 @@ Table of Contents
 | Total On-Chip Power (W)  | 0.076        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.005        |
+| Dynamic (W)              | 0.004        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 84.6         |
@@ -52,15 +52,15 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.001 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |    26386 |       --- |             --- |
-|   LUT as Logic |    <0.001 |     5873 |     20800 |           28.24 |
+| Clocks         |    <0.001 |        3 |       --- |             --- |
+| Slice Logic    |    <0.001 |    26460 |       --- |             --- |
+|   LUT as Logic |    <0.001 |     5979 |     20800 |           28.75 |
 |   CARRY4       |    <0.001 |       28 |      8150 |            0.34 |
-|   Register     |    <0.001 |    16783 |     41600 |           40.34 |
+|   Register     |    <0.001 |    16719 |     41600 |           40.19 |
 |   BUFG         |     0.000 |        1 |        32 |            3.13 |
 |   Others       |     0.000 |        7 |       --- |             --- |
-|   F7/F8 Muxes  |     0.000 |     3317 |     32600 |           10.17 |
-| Signals        |    <0.001 |    19753 |       --- |             --- |
+|   F7/F8 Muxes  |     0.000 |     3296 |     32600 |           10.11 |
+| Signals        |    <0.001 |    19874 |       --- |             --- |
 | I/O            |     0.003 |       45 |       106 |           42.45 |
 | Static Power   |     0.072 |          |           |                 |
 | Total          |     0.076 |          |           |                 |
@@ -142,9 +142,8 @@ Table of Contents
 +-----------------+-----------+
 | Name            | Power (W) |
 +-----------------+-----------+
-| task_a_fpga_top |     0.005 |
-|   top           |     0.002 |
-|     clkdiv      |     0.001 |
+| task_a_fpga_top |     0.004 |
+|   top           |     0.001 |
 +-----------------+-----------+
 
 

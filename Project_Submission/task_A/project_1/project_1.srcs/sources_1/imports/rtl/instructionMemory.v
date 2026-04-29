@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 
 module instructionMemory#(
-    parameter INIT_FILE = "instruction.mem",
+    parameter INIT_FILE = "taskc.mem",
     parameter OPERAND_LENGTH = 31
 )(
     input  wire [OPERAND_LENGTH:0] instAddress,
