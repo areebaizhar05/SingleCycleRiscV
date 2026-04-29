@@ -17,7 +17,7 @@
 //     localparam MAX_COUNT = 50_000_000 - 1;   <- 1 Hz on board
 
 module riscv_fpga_top #(
-    parameter INIT_FILE = "taskc.mem"
+    parameter INIT_FILE = "instruction.mem"
 ) (
     input  wire        CLK100MHZ,
     input  wire        btnC,
