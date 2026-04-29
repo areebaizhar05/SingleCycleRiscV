@@ -70,8 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 1
-set_param xicom.use_bs_reader 1
+set_msg_config -id {Common 17-41} -limit 10000000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcpg236-1
 
@@ -89,6 +88,7 @@ OPTRACE "Adding files" START { }
 read_mem {
   {C:/Users/Student/Downloads/CA project/SingleCycleRiscV/Project_Submission/task_A/project_1/project_1.srcs/sources_1/imports/assembly_code/instruction.mem}
   {C:/Users/Student/Downloads/CA project/SingleCycleRiscV/Project_Submission/task_A/project_1/project_1.srcs/sources_1/imports/assembly_code/taskc.mem}
+  {C:/Users/Student/Downloads/CA project/SingleCycleRiscV/Project_Submission/task_A/project_1/project_1.srcs/sources_1/imports/assembly_code/instruction copy.mem}
 }
 read_verilog -library xil_defaultlib {
   {C:/Users/Student/Downloads/CA project/SingleCycleRiscV/Project_Submission/task_A/project_1/project_1.srcs/sources_1/imports/rtl/AddressDecoder.v}

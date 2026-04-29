@@ -2,11 +2,10 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Wed Apr 29 14:58:46 2026
-# Process ID: 4052
+# Start of session at: Thu Apr 30 00:09:43 2026
+# Process ID: 21596
 # Current directory: C:/Users/Student/Downloads/CA project/SingleCycleRiscV/Project_Submission/task_A/project_1/project_1.runs/synth_1
 # Command line: vivado.exe -log task_a_fpga_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source task_a_fpga_top.tcl
 # Log file: C:/Users/Student/Downloads/CA project/SingleCycleRiscV/Project_Submission/task_A/project_1/project_1.runs/synth_1/task_a_fpga_top.vds
 # Journal file: C:/Users/Student/Downloads/CA project/SingleCycleRiscV/Project_Submission/task_A/project_1/project_1.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
-source task_a_fpga_top.tcl -notrace
