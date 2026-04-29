@@ -1,46 +1,31 @@
 # taskc.s
-# Task C - Custom Program (Summation of an arithmetic sequence)
-# MUST USE: LUI, JAL, BNE (from Task B requirements)
-# Reads switch input N. If N != 0, computes Sum = N + (N-1) + ... + 1.
-# Outputs the Sum to the LEDs (lower 16) and a LUI value to the 7-segment (upper 16).
+# Summation of arithmetic sequence from switch input N
+# Sum = N + (N-1) + ... + 1
+# Lower 16 bits -> LEDs
+# Upper 16 bits -> 7-Segment Display
+# Required instructions: LUI, JAL, BNE
 
 main:
-    # 1. Setup MMIO Addresses
-    addi x30, x0, 768          # Switch Address (0x300)
-    addi x31, x0, 512          # LED/7-Seg Address (0x200)
+    addi x30, x0, 768          # Switch address (0x300)
+    addi x31, x0, 512          # Output address (0x200)
 
 read_input:
-    # 2. Wait for user to input a number
     lw x5, 0(x30)              # Read N from switches
-    beq x5, x0, read_input     # If N is 0, wait
-
-    add x6, x0, x0             # x6 will hold our SUM. Start at 0.
-    add x7, x0, x5             # x7 is our COUNTER. Start at N.
+    beq x5, x0, read_input     # Wait if N = 0
+    add x6, x0, x0             # SUM = 0
+    add x7, x0, x5             # COUNTER = N
 
 sum_loop:
-    # 3. Add counter to sum using a Subroutine! [Uses JAL]
-    jal ra, add_subroutine     
-    
-    # 4. Decrement counter and loop
-    addi x7, x7, -1            # COUNTER = COUNTER - 1
-    bne x7, x0, sum_loop       # If COUNTER is not 0, loop back [Uses BNE]
+    jal ra, add_subroutine     # [JAL] Call subroutine, SUM += COUNTER
+    addi x7, x7, -1            # COUNTER--
+    bne x7, x0, sum_loop       # [BNE] Loop if COUNTER != 0
 
 display:
-    # 5. Output the result and verify LUI
-    # We will load 0x000AA000 into x8 [Uses LUI]
-    # This will display "00AA" on the 7-segment display!
-    lui x8, 0x000AA            
-    
-    # Add the LUI value to our sum
-    add x6, x6, x8             
-    
-    # Write to MMIO (Lower 16 bits -> LEDs, Upper 16 bits -> 7-Segment)
-    sw x6, 0(x31)              
-    
-    # Loop back to start
-    beq x0, x0, read_input     
+    lui x8, 0x00001            # [LUI] x8 = 0x00001000, upper 16 = 0x0000
+    add x6, x6, x8             # Merge LUI value with SUM
+    sw x6, 0(x31)              # Write to output, lower 16 -> LEDs, upper 16 -> 7-seg
+    beq x0, x0, read_input     # Go back, read next input
 
 add_subroutine:
-    # Addition logic inside subroutine
     add x6, x6, x7             # SUM = SUM + COUNTER
-    jalr x0, 0(ra)             # Return from subroutine
+    jalr x0, ra, 0             # Return

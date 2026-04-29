@@ -1,4 +1,4 @@
-`timescale 1ns / 1ps
+// task_b_fpga_top.v - Updated for ID 9625
 
 module task_b_fpga_top (
     input  wire        CLK100MHZ,

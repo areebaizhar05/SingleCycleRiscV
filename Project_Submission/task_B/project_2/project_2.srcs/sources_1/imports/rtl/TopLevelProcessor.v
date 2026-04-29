@@ -1,4 +1,4 @@
-`timescale 1ns / 1ps
+// TopLevelProcessor.v - Re-syncing for assembly changes
 
 // TopLevelProcessor.v
 // Single-cycle RISC-V processor datapath.
@@ -19,7 +19,7 @@
 //     u_mmio        addressDecoderTop
 
 module TopLevelProcessor #(
-    parameter INIT_FILE = "instruction.mem"
+    parameter INIT_FILE = "taskb.mem"
 ) (
     input  wire        clk,
     input  wire        rst,
