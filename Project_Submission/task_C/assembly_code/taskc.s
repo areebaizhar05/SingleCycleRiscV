@@ -36,7 +36,7 @@ POLL:
     sw   a0,  0(x31)        # write to MMIO -> 7-seg=ABCD, LEDs=sum
 
 HALT:
-    jal  x0,  HALT          # freeze result on display
+    jal  x0,  HALT         # freeze result on display
 
 # ============================================================
 # rec_sum(n): returns sum = 1+2+...+n in a0
