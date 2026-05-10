@@ -1,0 +1,16 @@
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+=========================================
+Task C: Recursive Summation Tests
+=========================================
+--- n=1 | led=0x0001 seg=0xabcd | exp led=0x0001 seg=0xabcd | PASS
+--- n=2 | led=0x0003 seg=0xabcd | exp led=0x0003 seg=0xabcd | PASS
+--- n=3 | led=0x0006 seg=0xabcd | exp led=0x0006 seg=0xabcd | PASS
+--- n=4 | led=0x000a seg=0xabcd | exp led=0x000a seg=0xabcd | PASS
+--- n=5 | led=0x000f seg=0xabcd | exp led=0x000f seg=0xabcd | PASS
+--- n=6 | led=0x0015 seg=0xabcd | exp led=0x0015 seg=0xabcd | PASS
+--- n=7 | led=0x001c seg=0xabcd | exp led=0x001c seg=0xabcd | PASS
+=========================================
+Task C Results:  7 PASSED,  0 FAILED
+=========================================
+$finish called at time : 21276 ns : File "C:/Users/Student/Downloads/CA project/SingleCycleRiscV/Project_Submission/task_C/project_3/project_3.srcs/sim_1/new/tb_task_c.v" Line 118
