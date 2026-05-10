@@ -2,16 +2,17 @@
 # Webtalk v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Wed Apr 29 21:36:24 2026
-# Process ID: 12696
+# Start of session at: Wed May  6 21:50:39 2026
+# Process ID: 16676
 # Current directory: C:/Users/Student/Downloads/CA project/SingleCycleRiscV/Project_Submission/task_C/project_3/project_3.sim/sim_1/behav/xsim
 # Command line: wbtcv.exe -mode batch -source C:/Users/Student/Downloads/CA project/SingleCycleRiscV/Project_Submission/task_C/project_3/project_3.sim/sim_1/behav/xsim/xsim.dir/tb_task_c_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: C:/Users/Student/Downloads/CA project/SingleCycleRiscV/Project_Submission/task_C/project_3/project_3.sim/sim_1/behav/xsim/webtalk.log
 # Journal file: C:/Users/Student/Downloads/CA project/SingleCycleRiscV/Project_Submission/task_C/project_3/project_3.sim/sim_1/behav/xsim\webtalk.jou
 #-----------------------------------------------------------
 source C:/Users/Student/Downloads/CA -notrace
-invalid command name "%"
+invalid command name "******"
+ambiguous command name "******": after append apply array auto_execok auto_import auto_load auto_load_index auto_qualify binary break case catch cd chan clock close close_msg_db cmd concat config_webtalk continue create_cluster_configuration create_gui_custom_command create_gui_custom_command_arg create_msg_db create_property dict encoding eof error eval exec exit expr fblocked fconfigure fcopy file fileevent flush for foreach format get_cluster_configurations get_gui_custom_command_args get_gui_custom_commands get_msg_config get_param get_property gets glob global help history if incr info interp join lappend lassign lindex linsert lint_files list list_param list_property list_property_value llength load load_msg_db lrange lrepeat lreplace lreverse lsearch lset lsort namespace open package pid proc puts pwd read regexp register_proc regsub remove_cluster_configurations remove_gui_custom_command_args remove_gui_custom_commands rename report_environment report_param report_property reset_msg_config reset_msg_count reset_param reset_property return scan seek send_gid_msg send_msg_id set set_msg_config set_param set_property socket source split string subst switch tclLog tell time trace unknown unload unregister_proc unset update uplevel upvar validate_cluster_configurations variable version vwait webserver webtalk_add_data webtalk_dump_data webtalk_init webtalk_register_client webtalk_terminate webtalk_transmit while
     while executing
-"% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current"
-    (file "C:/Users/Student/Downloads/CA" line 1)
-INFO: [Common 17-206] Exiting Webtalk at Wed Apr 29 21:36:24 2026...
+"****** Webtalk v2020.1 (64-bit)"
+    (file "C:/Users/Student/Downloads/CA" line 2)
+INFO: [Common 17-206] Exiting Webtalk at Wed May  6 21:50:39 2026...

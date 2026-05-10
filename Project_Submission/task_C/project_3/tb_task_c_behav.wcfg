@@ -11,13 +11,13 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="101000001fs"></ZoomEndTime>
-      <Cursor1Time time="101000000fs"></Cursor1Time>
+      <ZoomStartTime time="3546070fs"></ZoomStartTime>
+      <ZoomEndTime time="19130534fs"></ZoomEndTime>
+      <Cursor1Time time="14218494fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="204"></NameColumnWidth>
-      <ValueColumnWidth column_width="98"></ValueColumnWidth>
+      <ValueColumnWidth column_width="90"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="5" />
    <wvobject fp_name="/tb_task_c/clk" type="logic">
@@ -31,6 +31,8 @@
    <wvobject fp_name="/tb_task_c/sw" type="array">
       <obj_property name="ElementShortName">sw[15:0]</obj_property>
       <obj_property name="ObjectShortName">sw[15:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+      <obj_property name="isExpanded"></obj_property>
    </wvobject>
    <wvobject fp_name="/tb_task_c/led" type="array">
       <obj_property name="ElementShortName">led[15:0]</obj_property>

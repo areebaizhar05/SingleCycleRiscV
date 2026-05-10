@@ -7,9 +7,9 @@ _start:
     addi x2,  x0, 511      # SP = 511 (top of stack area)
 
     #base addresses
-    addi x5,  x0, 768      # x5 = SWITCH_ADDR
-    addi x6,  x0, 512      # x6 = LED_ADDR
-    addi x7,  x0, 1024     # x7 = RESET_ADDR
+    addi x5,  x0, 768      # x5 = SWITCH_ADD 0x300
+    addi x6,  x0, 512      # x6 = LED_ADDR 0x200
+    addi x7,  x0, 1024     # x7 = RESET_ADDR 0x400
 
     #test value
     addi x22, x0, 3        # x22 = test value 3
@@ -31,7 +31,7 @@ SWITCH_INP:
 
     #cehck for reset input
     lw   x10, 0(x7)        #read reg x7 (reset)
-    bne  x10, x0, IDLE_STATE   #if reset input not 0, stay in IDLE state 
+    bne  x10, x0, IDLE_STATE   #if reset input not 0 (reset pressed=1), stay in IDLE state 
 
     #else : read swtich inp
     lw   x10, 0(x5)        #wtv switch value in x5 we read in x10
@@ -43,8 +43,8 @@ SWITCH_INP:
     # Call countdown subroutine with x10 as argument
 
     # Save return address on stack before calling
-    addi x2, x2, -4        # move stack pointer down 4 bytes -(int)
-    sw   x1, 0(x2)         # push return address onto stack
+    addi x2, x2, -4        # move stack pointer down 4 bytes -(int) 511->507 (sp)
+    sw   x1, 0(x2)         # push return address onto stack (507)
 
     jal  x1, COUNTDOWN     # call subroutine, saves PC+4 into x1
 
@@ -69,10 +69,10 @@ COUNTDOWN:
     # Save registers x11 and x12 on the stack
     addi x2,  x2,  -8      # make room for 2 registers (8 bytes)
     sw   x11, 4(x2)        #save x11 onto stack -> value to start counter and then decrement
-    sw   x12, 0(x2)        #save x12 onto stack -> delay gap
+    sw   x12, 0(x2)        #save x12 onto stack -> delay gap 1second max gap -> 500->0 
 
     #Load argument into counter register
-    add  x11, x10, x0      #x11 = counter = initial count value
+    add  x11, x10, x0      #x11 = counter = initial count value (blank reg storing the start value (eg 3))
 
 DECREMENT_LOOP:
 
@@ -83,7 +83,7 @@ DECREMENT_LOOP:
     beq  x11, x0, EXIT_COUNTER    # if counter == 0, exit
 
     #Test value check using x22
-    bne  x11, x22, SKIP_TEST      # skip if counter != test value
+    bne  x11, x22, SKIP_TEST      # skip if counter != test value 
     sw   x22, 0(x6)               # TEST MATCH: light up x22 on LEDs
 
 SKIP_TEST:
@@ -124,9 +124,9 @@ RESET_NOW:
     # (c) Restore x11 and x12 from stack
     lw   x11, 4(x2)        # restore x11
     lw   x12, 0(x2)        # restore x12
-    addi x2,  x2, 8        # move stack pointer back up
+    addi x2,  x2, 8        # move stack pointer back up (511)
 
-    ret                    # return to caller (jalr x0, x1, 0)
+    ret  # return to caller (jalr x0, x1, 0) (goes to lw x1 0x20 (after jal x1 countdown))
 
 
 # ============================================================
