@@ -3,7 +3,7 @@
 May 27 2020
 20:09:33
 C:/Users/Student/Downloads/CA project/SingleCycleRiscV/Project_Submission/task_A/project_1/project_1.sim/sim_1/behav/xsim/glbl.v,1590624368,verilog,,,,glbl,,,,,,,,
-C:/Users/Student/Downloads/CA project/SingleCycleRiscV/Project_Submission/task_A/project_1/project_1.srcs/sim_1/imports/tb/tb_task_a.v,1777489633,verilog,,,,tb_task_a,,,,,,,,
+C:/Users/Student/Downloads/CA project/SingleCycleRiscV/Project_Submission/task_A/project_1/project_1.srcs/sim_1/imports/tb/tb_task_a.v,1778398458,verilog,,,,tb_task_a,,,,,,,,
 C:/Users/Student/Downloads/CA project/SingleCycleRiscV/Project_Submission/task_A/project_1/project_1.srcs/sources_1/imports/rtl/AddressDecoder.v,1777187897,verilog,,C:/Users/Student/Downloads/CA project/SingleCycleRiscV/Project_Submission/task_A/project_1/project_1.srcs/sources_1/imports/rtl/DataMemory.v,,AddressDecoder,,,,,,,,
 C:/Users/Student/Downloads/CA project/SingleCycleRiscV/Project_Submission/task_A/project_1/project_1.srcs/sources_1/imports/rtl/DataMemory.v,1777187897,verilog,,C:/Users/Student/Downloads/CA project/SingleCycleRiscV/Project_Submission/task_A/project_1/project_1.srcs/sources_1/imports/rtl/ProgramCounter.v,,DataMemory,,,,,,,,
 C:/Users/Student/Downloads/CA project/SingleCycleRiscV/Project_Submission/task_A/project_1/project_1.srcs/sources_1/imports/rtl/ProgramCounter.v,1777187897,verilog,,C:/Users/Student/Downloads/CA project/SingleCycleRiscV/Project_Submission/task_A/project_1/project_1.srcs/sources_1/imports/rtl/Registerfile.v,,ProgramCounter,,,,,,,,
